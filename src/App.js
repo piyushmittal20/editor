@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import {useState} from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Tab from './Tab';
+import {Row, Col} from "react-bootstrap";
+import WorkingArea from './components/WorkingArea';
 
 function App() {
+  const [color, setColor] = useState("indianred")
+  const [value, setValue] = useState(100)
+  const [blur, setBlur] = useState(0)
+  const [bright, setBright] = useState(100)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Row>
+      <Col sm={5}>
+        <Tab 
+        color={color} value={value} blur={blur} bright={bright}
+        setColor={setColor} setValue ={setValue} setBlur={setBlur} setBright={setBright}
+        />
+      </Col>
+      <Col sm={7}>
+      <WorkingArea color={color} value={value} blur={blur} bright={bright}/>
+      </Col>
+    </Row>
+    </>
   );
 }
 

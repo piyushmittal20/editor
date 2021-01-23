@@ -10,7 +10,7 @@ const ColorPicker = ({color, setColor}) => {
     }
 
     return (
-        <div className='box'>
+        <div className='pickerbox'>
             <button 
             className='pickerButton'
       onClick={() => setShowColorPicker(showColorPicker => !showColorPicker)}>
@@ -18,10 +18,10 @@ const ColorPicker = ({color, setColor}) => {
       {
         showColorPicker && (
             <div>
-                <button
-                className='pickerButton'
+                <div
+                className='pickerButton2'
                 onClick={() => setShowColorPicker2(showColorPicker2 => !showColorPicker2)}>
-                    {showColorPicker2 ? 'SketchPicker' : 'BlockPicker'}</button>
+                    {showColorPicker2 ? '🎨' : '🖌'}</div>
                     {
                         showColorPicker2 ? 
                         <SketchPicker color={color} onChange={updatedcolor => setColor(updatedcolor.hex)} />

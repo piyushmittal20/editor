@@ -1,19 +1,19 @@
-const BlurSlider = ({blur, setBlur}) => {
+const GrayScale = ({grayScale, setGrayScale}) => {
     return (
         <div className='box'>
-            <h4>Blurness</h4>
+            <h4>GaryScale</h4>
             <div className="slidecontainer">
             <input 
             className='slider'
             type='range' 
             min='0' 
             max='100' 
-            value={blur} 
-            onChange={e => setBlur(e.target.value)}/>
-            <h3>{blur}</h3>
+            value={grayScale} 
+            onChange={e => setGrayScale(e.target.value)}/>
+            <h3>{grayScale}</h3>
             </div>
         </div>
     )           
 }
 
-export default BlurSlider
+export default GrayScale

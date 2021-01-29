@@ -4,9 +4,6 @@ const Emoji = ({setChosenEmoji}) => {
 
   const onEmojiClick = (event, emojiObject) => {
     setChosenEmoji(emojiObject);
-    // const arr = [];
-    // arr.push(emojiObject.emoji);
-    // console.log(arr);
   };
 
   return (

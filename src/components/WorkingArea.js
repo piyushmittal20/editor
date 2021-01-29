@@ -26,6 +26,14 @@ const WorkingArea = ({
 
   const Sepia = sepia + '%';
 
+  console.log(editorState);
+
+  const arr = []
+
+  arr.push(editorState)
+
+  // console.log(arr);
+
   return (
     <div className="colorArea" style={{ backgroundColor: color }}>
       <div
@@ -43,9 +51,10 @@ const WorkingArea = ({
           </Draggable>
         ) : ""
         }
-        {/* <div>{editorState.map(text => (
-          <p>{text}</p>
-        ))}</div> */}
+
+        {/* <Draggable>
+          <div style={{color: 'white'}}>{arr[0]}</div>
+        </Draggable> */}
       </div>
     </div>
   );

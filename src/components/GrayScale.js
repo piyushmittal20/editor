@@ -1,7 +1,7 @@
 const GrayScale = ({grayScale, setGrayScale}) => {
     return (
         <div className='box'>
-            <h4>GaryScale</h4>
+            <h6>GaryScale</h6>
             <div className="slidecontainer">
             <input 
             className='slider'
@@ -10,7 +10,7 @@ const GrayScale = ({grayScale, setGrayScale}) => {
             max='100' 
             value={grayScale} 
             onChange={e => setGrayScale(e.target.value)}/>
-            <h3>{grayScale}</h3>
+            <h5>{grayScale}</h5>
             </div>
         </div>
     )           

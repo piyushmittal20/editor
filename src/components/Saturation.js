@@ -2,7 +2,7 @@ const Saturation = ({saturate, setSaturate}) => {
 
     return (
         <div className='box'>
-            <h4>Saturation</h4>
+            <h6>Saturation</h6>
             <div className="slidecontainer">
             <input 
             className='slider'
@@ -10,7 +10,7 @@ const Saturation = ({saturate, setSaturate}) => {
             min='0' 
             max='100' 
             value={saturate} onChange={e => setSaturate(e.target.value)}/>
-            <h3>{saturate}</h3>
+            <h5>{saturate}</h5>
             </div>
         </div>
     )           

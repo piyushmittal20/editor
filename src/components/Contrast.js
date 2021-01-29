@@ -2,7 +2,7 @@ const Contrast = ({contrast, setContrast}) => {
 
     return (
         <div className='box'>
-            <h4>Contrast</h4>
+            <h6>Contrast</h6>
             <div className="slidecontainer">
             <input 
             className='slider'
@@ -10,7 +10,7 @@ const Contrast = ({contrast, setContrast}) => {
             min='0' 
             max='100' 
             value={contrast} onChange={e => setContrast(e.target.value)}/>
-            <h3>{contrast}</h3>
+            <h5>{contrast}</h5>
             </div>
         </div>
     )           

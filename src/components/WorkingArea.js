@@ -1,3 +1,5 @@
+import Draggable from 'react-draggable';
+
 const WorkingArea = ({
   color,
   value,
@@ -8,6 +10,7 @@ const WorkingArea = ({
   saturate,
   sepia,
   chosenEmoji,
+  editorState,
 }) => {
   const opacityValue = value / 100;
 
@@ -32,7 +35,17 @@ const WorkingArea = ({
           filter: `blur(${blurValue})  brightness(${brightnessValue}) grayScale(${GrayScale}) contrast(${Contrast}) saturate(${saturation}) sepia(${Sepia})`,
         }}
       >
-        {chosenEmoji ? <span style={{fontSize: '4rem'}}>{chosenEmoji.emoji}</span> : <span></span>}
+        {chosenEmoji ? (
+          <Draggable>
+            <div style={{fontSize: '4rem', cursor: 'pointer'}}>
+            {chosenEmoji.emoji}
+            </div>
+          </Draggable>
+        ) : ""
+        }
+        {/* <div>{editorState.map(text => (
+          <p>{text}</p>
+        ))}</div> */}
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ const OpacitySlider = ({value, setValue}) => {
 
     return (
         <div className='box'>
-            <h4>Opacity</h4>
+            <h6>Opacity</h6>
             <div className="slidecontainer">
             <input 
             className='slider'
@@ -10,7 +10,7 @@ const OpacitySlider = ({value, setValue}) => {
             min='0' 
             max='100' 
             value={value} onChange={e => setValue(e.target.value)}/>
-            <h2>{value}</h2>
+            <h3>{value}</h3>
             </div>
         </div>
     )           

@@ -1,7 +1,7 @@
 const Brightness = ({bright, setBright}) => {
     return (
         <div className='box'>
-            <h4>Brightness</h4>
+            <h6>Brightness</h6>
             <div className="slidecontainer">
             <input 
             className='slider'
@@ -10,7 +10,7 @@ const Brightness = ({bright, setBright}) => {
             max='100' 
             value={bright} 
             onChange={e => setBright(e.target.value)}/>
-            <h3>{bright}</h3>
+            <h5>{bright}</h5>
             </div>
         </div>
     )           

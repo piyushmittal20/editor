@@ -1,7 +1,7 @@
 const BlurSlider = ({blur, setBlur}) => {
     return (
         <div className='box'>
-            <h4>Blurness</h4>
+            <h6>Blurness</h6>
             <div className="slidecontainer">
             <input 
             className='slider'
@@ -10,7 +10,7 @@ const BlurSlider = ({blur, setBlur}) => {
             max='100' 
             value={blur} 
             onChange={e => setBlur(e.target.value)}/>
-            <h3>{blur}</h3>
+            <h5>{blur}</h5>
             </div>
         </div>
     )           

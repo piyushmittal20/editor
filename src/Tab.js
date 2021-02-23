@@ -12,6 +12,7 @@ import Saturation from "./components/Saturation";
 import Sepia from "./components/Sepia";
 import Editor from "./components/Editor";
 import ImageUpload from "./components/ImageUpload";
+import DragList from './components/DragList';
 
 const Tabs = ({
   color,
@@ -81,7 +82,9 @@ const Tabs = ({
                 </div>
               </Tab.Pane>
               <Tab.Pane eventKey="second">
-                <p>lorem100</p>
+                <div className="col-6" style={{ height: "100%", padding: "20px" }}>
+                  <DragList />
+                </div>
               </Tab.Pane>
               <Tab.Pane eventKey="third">
                 <div>

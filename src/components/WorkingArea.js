@@ -1,4 +1,5 @@
 import Draggable from 'react-draggable';
+import DropList from './DropList';
 
 const WorkingArea = ({
   color,
@@ -26,13 +27,9 @@ const WorkingArea = ({
 
   const Sepia = sepia + '%';
 
-  console.log(editorState);
+  const array = []
 
-  const arr = []
-
-  arr.push(editorState)
-
-  // console.log(arr);
+  array.push(editorState)
 
   return (
     <div className="colorArea" style={{ backgroundColor: color }}>
@@ -43,9 +40,10 @@ const WorkingArea = ({
           filter: `blur(${blurValue})  brightness(${brightnessValue}) grayScale(${GrayScale}) contrast(${Contrast}) saturate(${saturation}) sepia(${Sepia})`,
         }}
       >
+        <DropList />
         {chosenEmoji ? (
           <Draggable>
-            <div style={{fontSize: '4rem', cursor: 'pointer'}}>
+            <div style={{fontSize: '4rem', cursor: 'pointer', margin: '0px', padding: '0px', border: '1px solid black', width: '100px'}}>
             {chosenEmoji.emoji}
             </div>
           </Draggable>
@@ -53,7 +51,7 @@ const WorkingArea = ({
         }
 
         {/* <Draggable>
-          <div style={{color: 'white'}}>{arr[0]}</div>
+          <div style={{color: 'white'}}>{array && array.map(arr => (arr))}</div>
         </Draggable> */}
       </div>
     </div>

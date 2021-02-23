@@ -1,17 +1,13 @@
 import {useState} from 'react';
-import Draggable from 'react-draggable';
 
 const ImageUpload = () => {
     const [selectedFiles, setSelectedFiles] = useState([]);
 
     const handleImageChange = (e) => {
-      // console.log(e.target.files[])
       if (e.target.files) {
         const filesArray = Array.from(e.target.files).map((file) =>
           URL.createObjectURL(file)
         );
-  
-        // console.log("filesArray: ", filesArray);
   
         setSelectedFiles((prevImages) => prevImages.concat(filesArray));
         Array.from(e.target.files).map(
@@ -24,11 +20,9 @@ const ImageUpload = () => {
     //   console.log("source: ", source);
       return source.map((photo) => {
         return (
-            <Draggable>
                 <div style={{zIndex: 100}}>
                     <img src={photo} alt="" key={photo} />
                 </div>
-            </Draggable>
         )
       });
     };

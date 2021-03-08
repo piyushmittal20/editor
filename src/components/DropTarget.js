@@ -38,7 +38,7 @@ const DropTarget = props => {
             onDragLeave={dragLeave}
             style={{ width: "100%", height: "100%", ...(isOver ? insideStyle : {}) }}
             >
-                    {props.children}
+                {props.children}
             </div>
     );
 };

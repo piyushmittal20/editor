@@ -5,14 +5,15 @@ import ColorPicker from "./components/ColorPicker";
 import OpacitySlider from "./components/OpacitySlider";
 import BlurSlider from "./components/BlurSlider";
 import Brightness from "./components/Brightness";
-import Emoji from "./components/Emoji";
+// import Emoji from "./components/Emoji";
 import GrayScale from "./components/GrayScale";
 import Contrast from "./components/Contrast";
 import Saturation from "./components/Saturation";
 import Sepia from "./components/Sepia";
-import Editor from "./components/Editor";
+// import Editor from "./components/Editor";
 import ImageUpload from "./components/ImageUpload";
 import DragList from './components/DragList';
+import DoubleLayout from "./components/DoubleLayout";
 
 const Tabs = ({
   color,
@@ -104,7 +105,7 @@ const Tabs = ({
                 </div>
               </Tab.Pane>
               <Tab.Pane eventKey="fourth">
-                <button className='button' onClick={() => setShow((show) => !show)}>
+                {/* <button className='button' onClick={() => setShow((show) => !show)}>
                   {show ? 'Emoji' : 'Text Editor'}
                 </button>
                 {show ? (
@@ -123,7 +124,8 @@ const Tabs = ({
                         chosenEmoji={chosenEmoji}
                       />
                     </div>
-                  )}
+                  )} */}
+                  <DoubleLayout />
               </Tab.Pane>
             </Tab.Content>
           </Col>

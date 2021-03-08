@@ -6,15 +6,17 @@ import Draggable from 'react-draggable';
 export default () => {
     const [items, setItems] = React.useState([]);
 
+    console.log(items);
+
     const itemDropped = item => setItems([...items, item]);
     return (
         <DropTarget onItemDropped={itemDropped} dropEffect="link">
             <div className="drag-drop-container">
+            <div id="old-block"></div>
                 {items.map(item => (
                     <Draggable key={item}>
                         <div className="item">
-                            {/* {<img src={item} alt="..." />} */}
-                            {item}
+                            {<img className="image" src={item} alt="..." />}
                         </div>
                     </Draggable>
                 ))}

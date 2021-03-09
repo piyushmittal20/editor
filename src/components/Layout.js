@@ -1,8 +1,4 @@
-
-
-const DoubleLayout = () => {
-
-    
+const Layout = () => {
     function removeAllChildNodes(parent) {
         while(parent.firstChild) {
             parent.removeChild(parent.firstChild)
@@ -42,14 +38,11 @@ const DoubleLayout = () => {
         <div className="Div" onClick={() => handleClick(2)}>
             <img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIGNsYXNzPSJwYWdlIHN0YXJ0LXNlbGVjdGlvbiIgd2lkdGg9Ijk4LjQzOSUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCA5LjA5NDk0NzAxNzcyOTI4MmUtMTMgMTAwMDAgMTAxNTguNTc1MzYxMzkxMzE4Ij48ZyBjbGFzcz0ibm8tY2xpcHBpbmciPjxyZWN0IHg9IjAiIHk9IjkuMDk0OTQ3MDE3NzI5MjgyZS0xMyIgd2lkdGg9IjEwMDAwIiBoZWlnaHQ9IjEwMTU4LjU3NTM2MTM5MTMxOCIgZmlsbD0id2hpdGUiIHBvaW50ZXItZXZlbnRzPSJub25lIj48L3JlY3Q+PHJlY3Qgd2lkdGg9IjQxMDAiIGhlaWdodD0iNTYwMC4wMDAwMDAwMDAwMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY4MCwgMjE5OS4yODc2ODA2OTU2NTk3KSByb3RhdGUoMCkiIHN0eWxlPSJmaWxsOiByZ2IoMTkxLCAxOTEsIDE5MSk7IHN0cm9rZTogd2hpdGU7IHN0cm9rZS13aWR0aDogMTA7Ij48L3JlY3Q+PHJlY3Qgd2lkdGg9IjQxMDAiIGhlaWdodD0iNTYwMC4wMDAwMDAwMDAwMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUxODAsIDIxOTkuMjg3NjgwNjk1NjU5Nykgcm90YXRlKDApIiBzdHlsZT0iZmlsbDogcmdiKDE5MSwgMTkxLCAxOTEpOyBzdHJva2U6IHdoaXRlOyBzdHJva2Utd2lkdGg6IDEwOyI+PC9yZWN0PjwvZz48L3N2Zz4=" alt="..." />
         </div>
-        <div className="Div">
-            <img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIGNsYXNzPSJwYWdlIHN0YXJ0LXNlbGVjdGlvbiIgd2lkdGg9Ijk4LjQzOSUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCA5LjA5NDk0NzAxNzcyOTI4MmUtMTMgMTAwMDAgMTAxNTguNTc1MzYxMzkxMzE4Ij48ZyBjbGFzcz0ibm8tY2xpcHBpbmciPjxyZWN0IHg9IjAiIHk9IjkuMDk0OTQ3MDE3NzI5MjgyZS0xMyIgd2lkdGg9IjEwMDAwIiBoZWlnaHQ9IjEwMTU4LjU3NTM2MTM5MTMxOCIgZmlsbD0id2hpdGUiIHBvaW50ZXItZXZlbnRzPSJub25lIj48L3JlY3Q+PHJlY3Qgd2lkdGg9Ijg2MDAiIGhlaWdodD0iODYwMCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjgwLCA3NTkuMjg3NjgwNjk1NjYwMSkgcm90YXRlKDApIiBzdHlsZT0iZmlsbDogcmdiKDE5MSwgMTkxLCAxOTEpOyBzdHJva2U6IHdoaXRlOyBzdHJva2Utd2lkdGg6IDEwOyI+PC9yZWN0PjwvZz48L3N2Zz4=" alt="..." />
-        </div>
-        <div className="Div">
+        <div className="Div" onClick={() => handleClick(1)}>
             <img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIGNsYXNzPSJwYWdlIHN0YXJ0LXNlbGVjdGlvbiIgd2lkdGg9Ijk4LjQzOSUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCA5LjA5NDk0NzAxNzcyOTI4MmUtMTMgMTAwMDAgMTAxNTguNTc1MzYxMzkxMzE4Ij48ZyBjbGFzcz0ibm8tY2xpcHBpbmciPjxyZWN0IHg9IjAiIHk9IjkuMDk0OTQ3MDE3NzI5MjgyZS0xMyIgd2lkdGg9IjEwMDAwIiBoZWlnaHQ9IjEwMTU4LjU3NTM2MTM5MTMxOCIgZmlsbD0id2hpdGUiIHBvaW50ZXItZXZlbnRzPSJub25lIj48L3JlY3Q+PHJlY3Qgd2lkdGg9Ijg2MDAiIGhlaWdodD0iODYwMCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjgwLCA3NTkuMjg3NjgwNjk1NjYwMSkgcm90YXRlKDApIiBzdHlsZT0iZmlsbDogcmdiKDE5MSwgMTkxLCAxOTEpOyBzdHJva2U6IHdoaXRlOyBzdHJva2Utd2lkdGg6IDEwOyI+PC9yZWN0PjwvZz48L3N2Zz4=" alt="..." />
         </div>
         </div>
     )
 }
 
-export default DoubleLayout
+export default Layout;

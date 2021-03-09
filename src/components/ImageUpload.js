@@ -1,7 +1,7 @@
-import {useState} from 'react';
+// import {useState} from 'react';
 
-const ImageUpload = () => {
-    const [selectedFiles, setSelectedFiles] = useState([]);
+const ImageUpload = ({selectedFiles, setSelectedFiles}) => {
+    // const [selectedFiles, setSelectedFiles] = useState([]);
 
     const handleImageChange = (e) => {
       if (e.target.files) {
@@ -29,7 +29,8 @@ const ImageUpload = () => {
   
     return (
       <div className="app">
-        <div className="heading">React Multiple Images Preview</div>
+        <h1>Image Upload</h1>
+        {/* <div className="heading">React Multiple Images Preview</div> */}
         <div>
           <input type="file" id="file" multiple onChange={handleImageChange} />
           <div className="label-holder">
@@ -37,7 +38,7 @@ const ImageUpload = () => {
               <i className="material-icons">Add Photos</i>
             </label>
           </div>
-          <div className="result">{renderPhotos(selectedFiles)}</div>
+          {/* <div className="result">{renderPhotos(selectedFiles)}</div> */}
           <button type='submit' className='btn' onClick={() => console.log(selectedFiles)}>Upload</button>
         </div>
       </div>

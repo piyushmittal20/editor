@@ -51,7 +51,7 @@ const Tabs = ({
     <>
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
         <Row>
-          <Col sm={2} style={{borderRight: '2px solid #eee'}}>
+          <Col sm={2} style={{borderRight: '0px solid #ddd',  padding: '0 0 0 15px', textAlign: 'center', background:'#f6f8f8'}}>
             <Nav variant="pills" className="flex-column">
               <Nav.Item>
                 <Nav.Link eventKey="first" style={{ margin: "10px" }}>
@@ -83,7 +83,7 @@ const Tabs = ({
               </Nav.Item>
             </Nav>
           </Col>
-          <Col sm={10}>
+          <Col sm={10} style={{borderRight: '1px solid #ddd',}}>
             <Tab.Content>
               <Tab.Pane eventKey="first">
                 <div className="tab1">
